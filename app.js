@@ -2,7 +2,7 @@ const cameraButton = document.querySelector('#start-camera');
 const videoElem = document.querySelector('#camera');
 const takePicButton = document.querySelector('#take-picture');
 const canvas = document.querySelector('#pic-canvas');
-const galleryElem = document.querySelector('#gallery');
+
 
 const ctx = canvas.getContext('2d');
 let videoStream;
@@ -13,18 +13,18 @@ starta kamera/ ta bild -klar
 spara till local - klar?
 knapp för att ta bort bild #help
 fixa css:
-    ska det vara 2 sidor
+    ska det vara 2 sidor // 2 sidor funkar
     2 bilder per rad
     size för kamera
 pushnotifikation
-service worker
+service worker // funkar??
+spara local innan allt
 
 
 */
 
 //-----------ta bild-------------//
-
-cameraButton.addEventListener('click', async () => {
+window.addEventListener('load', async () => {
     if ('mediaDevices' in navigator) {
         videoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         console.log(videoStream);
@@ -60,31 +60,8 @@ const galleryPage = document.querySelector('to-gallery');
 
 function toGallery() {
     window.location.href="gallery.html";
-    getImages();
 }
     
-
-
-function createImage(image) {
-    const imageElem = document.createElement('img');
-    imageElem.setAttribute('src', image.image);
-
-    galleryElem.append(imageElem);
-
-}
-
-function getImages() {
-    const images = JSON.parse(localStorage.getItem('galleryApp'));
-
-    for(const image of images) {
-        createImage(image);
-    }
-}
-
-
-
-
-
 
 //--------pushnotis----------//
 

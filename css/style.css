@@ -9,16 +9,10 @@ body {
     align-items: center;
 }
 
-#start-camera {
-    background-color: #2A2E30;
-    color: white;
-    width: 100px;
-    height: 60px;
-    border: 1px solid white;
-    border-radius: 5px;
+#pic-canvas {
     margin-bottom: 10px;
-    cursor: pointer;
 }
+
 
 #take-picture {
     background-color: #2A2E30;
@@ -33,7 +27,24 @@ body {
 
 #camera {
     margin: 20px;
+    width: 400px;
+    height: 200px;
+
 }
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#to-gallery {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
 
 #gallery-wrapper {
     display: flex;
@@ -50,6 +61,8 @@ body {
 #gallery {
     flex-direction: column;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -59,3 +72,22 @@ body {
     align-items: center;
 }
 
+#remove-button {
+    z-index: 2;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+@media screen and (max-width: 600px) {
+    #camera {
+        margin: 20px;
+        width: 300px;
+        height: 150px;
+    }
+}
