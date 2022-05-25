@@ -1,0 +1,61 @@
+body {
+    background-color: #2A2E30;
+}
+
+#camera-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-camera {
+    background-color: #2A2E30;
+    color: white;
+    width: 100px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#take-picture {
+    background-color: #2A2E30;
+    color: white;
+    width: 100px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#camera {
+    margin: 20px;
+}
+
+#gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#gallery-wrapper h3 {
+    color: pink;
+}
+
+#gallery {
+    flex-direction: column;
+    display: flex;
+
+}
+
+#gallery img {
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
