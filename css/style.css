@@ -1,5 +1,6 @@
 body {
     background-color: #2A2E30;
+    height: 100%;
 }
 
 #camera-section {
@@ -13,8 +14,7 @@ body {
     margin-bottom: 10px;
 }
 
-
-#take-picture {
+#to-gallery {
     background-color: #2A2E30;
     color: white;
     width: 100px;
@@ -23,6 +23,26 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+#take-picture {
+    background-color: #2A2E30;
+    color: white;
+    width: 100%;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#notis {
+    display: none;
+    color: white;
+    border: 2px solid black;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 #camera {
@@ -54,12 +74,14 @@ body {
     margin-top: 30px;
 }
 
-#gallery-wrapper h3 {
+#gallery-wrapper h1 {
     color: pink;
 }
 
 #gallery {
     flex-direction: column;
+    column-count: 2;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,22 +89,37 @@ body {
 }
 
 #gallery img {
+    background-color: white;
     margin: 10px;
     justify-content: center;
     align-items: center;
 }
 
 #remove-button {
+    background-color: red;
     z-index: 2;
     display: flex;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     justify-content: flex-end;
     align-items: flex-end;
+    left: 130px;
+    bottom: 150px;
+    cursor: pointer;
 }
 
+#back-video {
+    background-color: #2A2E30;
+    color: white;
+    width: 100px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 600px) {
     #camera {

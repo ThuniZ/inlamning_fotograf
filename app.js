@@ -2,7 +2,7 @@ const cameraButton = document.querySelector('#start-camera');
 const videoElem = document.querySelector('#camera');
 const takePicButton = document.querySelector('#take-picture');
 const canvas = document.querySelector('#pic-canvas');
-
+const notis = document.querySelector('#notis');
 
 const ctx = canvas.getContext('2d');
 let videoStream;
@@ -15,13 +15,25 @@ knapp för att ta bort bild #help
 fixa css:
     ska det vara 2 sidor // 2 sidor funkar
     2 bilder per rad
-    size för kamera
-pushnotifikation
-service worker // funkar??
+    size för kamera - klar
+pushnotifikation - försvinner efter 3 sek //  klar
+service worker // funkar
 spara local innan allt
 
 
 */
+
+//----Service-Worker---///
+
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+        .then(() => { console.log('Service worker registrerad') })
+        .catch(() => { console.log('Service worker inte registrerad') });
+    }
+}
+
+registerServiceWorker();
 
 //-----------ta bild-------------//
 window.addEventListener('load', async () => {
@@ -29,10 +41,14 @@ window.addEventListener('load', async () => {
         videoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         console.log(videoStream);
         videoElem.style.display = 'flex';
-        //canvas.style.display = 'none';
         videoElem.srcObject = videoStream;
 
     }
+
+    const oldImg = JSON.parse(localStorage.getItem('galleryApp'));
+    oldImg.push(imagesGallery)
+    console.log(imagesGallery)
+
 });
 
 takePicButton.addEventListener('click', () => {
@@ -46,13 +62,14 @@ takePicButton.addEventListener('click', () => {
 
     localStorage.setItem('galleryApp', JSON.stringify(imagesGallery));
 
-    /*
-    videoStream.getTracks().forEach(track => {
-        track.stop();
-    });
 
-    videoElem.style.display = 'none';
-    */
+    //-----notis---//
+    notis.style.display = 'flex'
+
+    setTimeout(function(){
+        document.getElementById("notis").style.display = "none"; 
+       }, 3000);
+
 
 });
 
@@ -63,6 +80,6 @@ function toGallery() {
 }
     
 
-//--------pushnotis----------//
+
 
 

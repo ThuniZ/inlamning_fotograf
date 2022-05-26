@@ -14,7 +14,7 @@ function createImage(image) {
     removeElem.setAttribute('id', 'remove-button')
     galleryElem.append(removeElem)
     removeElem.addEventListener('click', () => {
-        removePic();
+        removePic(image);
     })
 
 }
@@ -29,8 +29,10 @@ function getImages() {
 
 
 
-function removePic() {
-
+function removePic(image) {
+    console.log(image)
+    localStorage.removeItem('id')
+    console.log(localStorage)
 }
 
 getImages();
