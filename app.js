@@ -11,7 +11,7 @@ let imagesGallery = [];
 /*
 starta kamera/ ta bild -klar
 spara till local - klar?
-knapp för att ta bort bild #help
+
 fixa css:
     ska det vara 2 sidor // 2 sidor funkar
     2 bilder per rad
