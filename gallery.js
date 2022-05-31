@@ -1,13 +1,8 @@
 /*
-knapp för att ta bort bild #help
+knapp för att ta bort bild - klar
 */
 
-
-console.log(localStorage)
 const galleryElem = document.querySelector('#gallery');
-
-
-
 
 
 function toVideo() {
@@ -45,7 +40,15 @@ function removePic(image) {
     console.log(image)
     console.log(localStorage)
 
+    let galleryRemove = JSON.parse(localStorage.getItem('galleryApp'));
 
+    const id = galleryRemove.findIndex((x) => x.id == image.id)
+    console.log(id)
+
+    galleryRemove.splice(id, 1);
+    galleryRemove = JSON.stringify(galleryRemove);
+
+    localStorage.setItem('galleryApp', galleryRemove);
     
 }
 

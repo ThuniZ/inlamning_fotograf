@@ -18,6 +18,7 @@ fixa css:
     size för kamera - klar
 pushnotifikation - försvinner efter 3 sek //  klar
 service worker // funkar
+    lägg till 
 spara local innan allt
 
 
@@ -61,7 +62,7 @@ takePicButton.addEventListener('click', () => {
     });
 
     localStorage.setItem('galleryApp', JSON.stringify(imagesGallery));
-
+    canvas.style.display = 'flex'
 
     //-----notis---//
     notis.style.display = 'flex'
@@ -73,6 +74,7 @@ takePicButton.addEventListener('click', () => {
 
 });
 
+//---byt sida--//
 const galleryPage = document.querySelector('to-gallery');
 
 function toGallery() {
