@@ -67,10 +67,14 @@ takePicButton.addEventListener('click', () => {
     //-----notis---//
     notis.style.display = 'flex'
 
+
     setTimeout(function(){
         document.getElementById("notis").style.display = "none"; 
        }, 3000);
 
+    setTimeout(function(){
+        document.getElementById("pic-canvas").style.display = "none"; 
+       }, 3000);
 
 });
 

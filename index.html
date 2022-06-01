@@ -13,13 +13,18 @@
     <body>
 
         <section id="header">
+            <div id="filler"></div>
+            <h1 id="title">Kamera</h1>
             <button id="to-gallery" onclick="toGallery()">Se sparade bilder</button>
         </section>
+
+
+        <canvas id="pic-canvas"></canvas>
 
         <section id="camera-section">
             
             <video src="" id="camera" autoplay></video>
-            <canvas id="pic-canvas"></canvas>
+            
             <button id="take-picture">Ta bild</button>
             <div id="notis">Din bild har sparats</div>
             
