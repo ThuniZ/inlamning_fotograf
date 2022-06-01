@@ -1,3 +1,9 @@
+/*
+Hämtar kameran i datorn
+kör serviceworker
+och pushar in bilderna i localstorage
+*/
+
 const cameraButton = document.querySelector('#start-camera');
 const videoElem = document.querySelector('#camera');
 const takePicButton = document.querySelector('#take-picture');
@@ -53,6 +59,7 @@ takePicButton.addEventListener('click', () => {
     canvas.style.display = 'flex'
 
     //-----notis---//
+    //Även visar bilden över kameran i 3 sek//
     notis.style.display = 'flex'
 
 

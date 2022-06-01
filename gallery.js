@@ -1,4 +1,6 @@
-
+/*
+JS för galleriet
+*/
 const galleryElem = document.querySelector('#gallery');
 
 
@@ -6,6 +8,8 @@ function toVideo() {
     window.location.href="index.html";
 }
 
+//skapar element för bilderna, även en eventListener som tar bort elemten
+//och kör removePic 
 function createImage(image) {
     const wrapp = document.createElement('article');
     wrapp.setAttribute('id', 'wrapp-button')
@@ -28,6 +32,8 @@ function createImage(image) {
     galleryElem.append(wrapp);
 }
 
+//hämtar bilder från localstorage
+//mappar ut de med hjälp av createImage
 function getImages() {
     const images = JSON.parse(localStorage.getItem('galleryApp'));
 
@@ -37,7 +43,8 @@ function getImages() {
 }
 
 
-
+//tar bort bilder från localstorage med splice
+//sen sparar om localstorage med de bilder som blev kvar 
 function removePic(image) {
     console.log(image)
     console.log(localStorage)
