@@ -1,6 +1,3 @@
-/*
-knapp för att ta bort bild - klar
-*/
 
 const galleryElem = document.querySelector('#gallery');
 
@@ -10,13 +7,15 @@ function toVideo() {
 }
 
 function createImage(image) {
+    const wrapp = document.createElement('article');
+    wrapp.setAttribute('id', 'wrapp-button')
     const imageElem = document.createElement('img');
     imageElem.setAttribute('src', image.image);
-    galleryElem.append(imageElem);
+
     
     const removeElem = document.createElement('button');
     removeElem.setAttribute('id', 'remove-button')
-    galleryElem.append(removeElem)
+
     
     removeElem.addEventListener('click', () => {
         removePic(image);
@@ -24,6 +23,9 @@ function createImage(image) {
         removeElem.remove();
     })
 
+    wrapp.append(imageElem)
+    wrapp.append(removeElem)
+    galleryElem.append(wrapp);
 }
 
 function getImages() {

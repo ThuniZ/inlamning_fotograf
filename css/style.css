@@ -12,15 +12,15 @@ body {
 }
 
 #pic-canvas {
-    margin-bottom: 10px;
-    width: 100%;
-    height: 498px;
+    margin: 10px;
+    width: 98%;
+    height: 500px;
     background-color: white;
     border-radius: 20px;
     display: none;
     z-index: 2;
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 0;
     border: 2px solid black;
 }
@@ -87,19 +87,15 @@ body {
     display: flex;
 }
 
-#to-gallery {
-    
-}
-
-
-
 
 #gallery-wrapper {
-    display: flex;
-    flex-direction: column;
+    margin-top: 1.125rem;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1rem;
+    width: 100%;
+  
 }
 
 #gallery-wrapper h1 {
@@ -107,37 +103,33 @@ body {
 }
 
 #gallery {
-    flex-direction: column;
-    column-count: 2;
-    position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 #gallery img {
     background-color: white;
     margin: 10px;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
-    
+}
+
+#wrapp-button {
+    position: relative;
 }
 
 #remove-button {
     background-color: red;
     z-index: 2;
-    display: flex;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    position: relative;
-    justify-content: flex-end;
-    align-items: flex-end;
-    left: 130px;
-    bottom: 150px;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #back-video {
@@ -160,5 +152,9 @@ body {
     #pic-canvas {
         height: 285px;
         width: 98%;
+    }
+    #gallery img {
+        width: 100px;
+        height: 100px;
     }
 }
