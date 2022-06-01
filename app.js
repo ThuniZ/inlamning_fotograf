@@ -9,18 +9,6 @@ let videoStream;
 let imagesGallery = [];
 
 /*
-starta kamera/ ta bild -klar
-spara till local - klar?
-
-fixa css:
-    ska det vara 2 sidor // 2 sidor funkar
-    2 bilder per rad
-    size för kamera - klar
-pushnotifikation - försvinner efter 3 sek //  klar
-service worker // funkar
-    lägg till 
-spara local innan allt
-
 
 */
 
